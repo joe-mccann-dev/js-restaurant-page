@@ -7,7 +7,15 @@ export default function pageLoad() {
   welcomeHeader.textContent = "Welcome to the Restaurant";
   welcomeHeader.classList.add('header');
   content.appendChild(welcomeHeader);
-  
+
+  const nav = document.createElement('div');
+  const homeLink = document.createElement('a');
+  homeLink.textContent = 'Home'
+  homeLink.setAttribute('id', 'home')
+  homeLink.href = '#';
+  nav.appendChild(homeLink);
+  content.appendChild(nav);
+
   const image = new Image();
   image.src = mainImage;
   image.classList.add('image');
