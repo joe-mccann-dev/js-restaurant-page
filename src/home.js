@@ -1,5 +1,4 @@
-export default function showHome() {
-  const content = document.querySelector('#content');
+export default function showHome(content) {
   const homeContent = document.createElement('div');
 
   const title = document.createElement('h1');

@@ -1,7 +1,6 @@
 import mainImage from './images/restaurant.jpg'
 
-export default function pageLoad() {
-  const content = document.querySelector('#content');
+export default function pageLoad(content) {
 
   const welcomeHeader = document.createElement('h1');
   welcomeHeader.textContent = "Welcome to the Restaurant";
