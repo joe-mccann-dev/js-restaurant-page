@@ -1,8 +1,6 @@
-import mainImage from './images/restaurant.jpg'
+import mainImage from './images/restaurant.jpg';
 
 export default function showHome(content, container) {
-  container.replaceChildren();
-
   const image = new Image();
   image.src = mainImage;
   image.classList.add('image');
@@ -20,6 +18,10 @@ export default function showHome(content, container) {
   container.appendChild(copy);
 
   const hoursContainer = document.createElement('div');
+  hoursContainer.classList.add('hours_container');
+  const hoursHeader = document.createElement('h2');
+  hoursHeader.textContent = 'Hours';
+  hoursContainer.appendChild(hoursHeader);
   const hoursList = document.createElement('ul');
   ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri'].forEach((day) => {
     hoursList.appendChild(createHours(day, [11, 10]));
