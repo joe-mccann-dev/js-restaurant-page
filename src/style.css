@@ -1,3 +1,47 @@
+:root {
+  --neutral-100-blur: rgb(245, 245, 245, 0.20);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  background-image: url("../src/images/wood-with-green-compressed.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  
+}
+
+.blur {
+  background: var(--neutral-100-blur);
+  backdrop-filter: blur(5px); 
+  height: 100vh;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .image {
   height: 50%;
   width: 50%;
@@ -7,3 +51,4 @@ nav {
   display: flex;
   gap: 8px;
 }
+
