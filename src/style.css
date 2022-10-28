@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root {
   --neutral-100-blur: rgb(245, 245, 245, 0.20);
 }
+
+/* BEGIN CSS RESET */
 
 html {
   box-sizing: border-box;
@@ -17,22 +21,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: normal;
 }
 
-body {
-  background-image: url("../src/images/wood-with-green-compressed.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  
-}
-
-.blur {
-  background: var(--neutral-100-blur);
-  backdrop-filter: blur(5px); 
-  height: 100vh;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -40,6 +28,24 @@ ol, ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* END CSS RESET */
+
+body {
+  background-image: url("../src/images/wood-with-green-compressed.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.blur {
+  background: var(--neutral-100-blur);
+  backdrop-filter: blur(5px); 
+  height: 100vh;
 }
 
 .image {
