@@ -1,4 +1,4 @@
-export default function showMenu(content, container) {
+export default function showMenu(staticDiv, currentModule) {
 
   const menuItems = [
     {
@@ -40,9 +40,9 @@ export default function showMenu(content, container) {
   });
 
   menuContainer.appendChild(menuList);
-  container.appendChild(menuContainer);
-  content.appendChild(container);
-  return content;
+  currentModule.appendChild(menuContainer);
+  staticDiv.appendChild(currentModule);
+  return currentModule;
 }
 
 function createMenuItem(menuObject) {
@@ -59,6 +59,5 @@ function createMenuItem(menuObject) {
   const description = document.createElement('p');
   description.textContent = menuObject['description'];
   menuItem.appendChild(description);
-
   return menuItem;
 }

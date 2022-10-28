@@ -2,20 +2,27 @@ import './style.css';
 import pageLoad from './page_load';
 import showHome from './home';
 import showMenu from './menu';
+import showContacts from './contact';
 
-const content = document.querySelector('#content');
-const container = document.createElement('div');
-container.classList.add('container');
-pageLoad(content, container);
+const staticDiv = document.querySelector('#static');
+const currentModule = document.createElement('div');
+currentModule.classList.add('container');
+pageLoad(staticDiv, currentModule);
 
 const homeLink = document.querySelector('#home');
 homeLink.addEventListener('click', ()=> {
-  container.replaceChildren();
-  showHome(content, container);
+  currentModule.replaceChildren();
+  showHome(staticDiv, currentModule);
 });
 
 const menuLink = document.querySelector('#menu');
 menuLink.addEventListener('click', () => {
-  container.replaceChildren();
-  showMenu(content, container);
+  currentModule.replaceChildren();
+  showMenu(staticDiv, currentModule);
+});
+
+const contactLink = document.querySelector('#contact');
+contactLink.addEventListener('click', () => {
+  currentModule.replaceChildren();
+  showContacts(staticDiv, currentModule)
 });

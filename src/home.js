@@ -1,10 +1,10 @@
 import mainImage from './images/restaurant.jpg';
 
-export default function showHome(content, container) {
+export default function showHome(staticDiv, currentModule) {
   const image = new Image();
   image.src = mainImage;
   image.classList.add('image');
-  container.appendChild(image);
+  currentModule.appendChild(image);
 
   const copy = document.createElement('p');
   copy.textContent = `
@@ -15,7 +15,7 @@ export default function showHome(content, container) {
     Thank you for visiting our website, see you soon!
   `
   copy.classList.add('copy');
-  container.appendChild(copy);
+  currentModule.appendChild(copy);
 
   const hoursContainer = document.createElement('div');
   hoursContainer.classList.add('hours_container');
@@ -30,10 +30,10 @@ export default function showHome(content, container) {
     hoursList.appendChild(createHours(day, [9, 10]));
   });
   hoursContainer.appendChild(hoursList);
-  container.appendChild(hoursContainer);
+  currentModule.appendChild(hoursContainer);
 
-  content.appendChild(container);
-  return content;
+  staticDiv.appendChild(currentModule);
+  return currentModule;
 };
 
 function createHours(day, range) {
