@@ -5,7 +5,7 @@ import showMenu from './menu';
 import showContacts from './contact';
 
 const staticDiv = document.querySelector('#static');
-const currentModule = document.createElement('div');
+const currentModule = document.querySelector('#current_module');
 currentModule.classList.add('container');
 pageLoad(staticDiv, currentModule);
 
