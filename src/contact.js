@@ -32,7 +32,7 @@ export default function showContacts(staticDiv, currentModule) {
   contactContainer.appendChild(contactList);
   currentModule.appendChild(contactContainer);
   staticDiv.appendChild(currentModule);
-  return currentModule;
+  return staticDiv;
 }
 
 function createListing(contact) {

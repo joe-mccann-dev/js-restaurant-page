@@ -6,6 +6,7 @@ export default function showHome(staticDiv, currentModule) {
   // image.classList.add('image');
   // currentModule.appendChild(image);
 
+  const homeContainer = document.createElement('div');
   const copy = document.createElement('p');
   copy.textContent = `
     The Veggie Shack has provided the diners of MetroWest with
@@ -23,6 +24,7 @@ export default function showHome(staticDiv, currentModule) {
   hoursHeader.textContent = 'Hours';
   hoursContainer.appendChild(hoursHeader);
   const hoursList = document.createElement('ul');
+  hoursList.classList.add('hours_list');
   ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri'].forEach((day) => {
     hoursList.appendChild(createHours(day, [11, 10]));
   });
@@ -33,7 +35,7 @@ export default function showHome(staticDiv, currentModule) {
   currentModule.appendChild(hoursContainer);
 
   staticDiv.appendChild(currentModule);
-  return currentModule;
+  return staticDiv;
 };
 
 function createHours(day, range) {

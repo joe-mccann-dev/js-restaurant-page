@@ -1,6 +1,6 @@
 import showHome from './home';
 
-export default function pageLoad(content, container) {
+export default function pageLoad(staticDiv, currentModule) {
   const nav = document.createElement('nav');
   const homeLink = document.createElement('a');
   homeLink.textContent = 'Home'
@@ -17,14 +17,14 @@ export default function pageLoad(content, container) {
   contactLink.setAttribute('id', 'contact');
   contactLink.href = '#'
   nav.appendChild(contactLink);
-  content.appendChild(nav);
+  staticDiv.appendChild(nav);
 
   const header = document.createElement('h1');
   header.textContent = "The Veggie Shack";
   header.classList.add('header');
-  content.appendChild(header);
+  staticDiv.appendChild(header);
 
-  showHome(content, container)
+  showHome(staticDiv, currentModule)
 
-  return content;
+  return staticDiv;
 }
