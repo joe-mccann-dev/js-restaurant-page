@@ -2,8 +2,12 @@
 
 :root {
   --neutral-100-blur: rgb(245, 245, 245, 0.20);
+  --neutral-800: #404040;
   --neutral-900: #171717;
-  --green-800: #166534;
+  --green-900: #14532d;
+  --yellow-300: #fde047;
+  --yellow-500: #eab308;
+  --yellow-300-faded: rgb(253, 224, 71, 0.2);
 }
 
 /* BEGIN CSS RESET */
@@ -66,6 +70,29 @@ body {
   max-width: 1000px;
   line-height: 150%;
   letter-spacing: 1px;
+  background-color: var(--yellow-300-faded);
+  border: solid 2px var(--neutral-800);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+li {
+  padding: 8px;
+}
+
+.menu_item_name {
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 4px;
+}
+
+.menu_item_price {
+  font-weight: 700;
+  text-align: right;
+}
+
+.menu_item_description {
+  font-size: 1.1rem;
 }
 
 .blur {
@@ -86,9 +113,10 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--green-800);
+  color: var(--green-900);
   font-weight: 700;
   font-size: 1.4rem;
+  border-bottom: solid 2.4px var(--yellow-500);
 }
 
 .hours_container {

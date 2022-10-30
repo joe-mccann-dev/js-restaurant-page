@@ -6,10 +6,9 @@ export default function showHome(staticDiv, currentModule) {
   // image.classList.add('image');
   // currentModule.appendChild(image);
 
-  const homeContainer = document.createElement('div');
   const copy = document.createElement('p');
   copy.textContent = `
-    The Veggie Shack has provided the diners of MetroWest with
+    The Veggie Shack has provided the diners of the metrowest area with
     nutritious and delicious plant-based meals since 1998. The menu listed here is our base menu,
     but you can call or stop in for our inspirational lunch and dinner
     specials! Click on the Contact tab above to give us a call. 
@@ -41,5 +40,5 @@ export default function showHome(staticDiv, currentModule) {
 function createHours(day, range) {
   const hours = document.createElement('li');
   hours.textContent = `${day}: ${range[0]}AM - ${range[1]}PM`;
-  return hours
+  return hours;
 }
