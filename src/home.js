@@ -25,15 +25,15 @@ export default function showHome(staticDiv, currentModule) {
   hoursContainer.appendChild(hoursHeader);
   const hoursList = document.createElement('ul');
   hoursList.classList.add('hours_list');
-  ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri'].forEach((day) => {
-    if (day === 'Fri') {
+  ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].forEach((day) => {
+    if (day === 'Friday') {
       hoursList.appendChild(createHours(day, [11, 11]))
     } else {
       hoursList.appendChild(createHours(day, [11, 10]));
     }
   });
-  hoursList.appendChild(createHours('Sat', [11, 11]));
-  hoursList.appendChild(createHours('Sun', [9, 8]));
+  hoursList.appendChild(createHours('Saturday', [11, 11]));
+  hoursList.appendChild(createHours('Sunday', [9, 8]));
   hoursContainer.appendChild(hoursList);
   currentModule.appendChild(hoursContainer);
 

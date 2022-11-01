@@ -1,3 +1,9 @@
+import baguettePic from './images/baguette.jpg';
+import falafelPic from './images/falafel.jpg';
+import nachosPic from './images/nachos.jpg';
+import pizzaPic from './images/pizza.jpg';
+import tofuPic from './images/tofu.jpg';
+
 export default function showMenu(staticDiv, currentModule) {
 
   const menuItems = [
@@ -7,7 +13,9 @@ export default function showMenu(staticDiv, currentModule) {
       description: `
       The most flavorful falafel west of the Middle East deep fried to perfection, wrapped 
       in flour tortilla with mixed greens red peppers, cukes, pickled red onion, and vegan tzatziki sauce.
-    `
+      
+    `,
+      imageSrc: falafelPic,
     },
     {
       name: '"Steak" Bomb',
@@ -16,14 +24,16 @@ export default function showMenu(staticDiv, currentModule) {
       Our house-smoked seitan, sauteed peppers and onions,
       topped with creamy cashew 'chz' sauce served on a toasted baguette (made fresh daily).
       Served with house cut shoestring fries.
-    `
+    `,
+      imageSrc: baguettePic,
     },
     {
       name: "Tofu Scramble",
       price: '11.95',
       description: `
     Herb-seasoned and pressed tofu, browned to perfection with Joe's favorite sauteed veggies. Served with your choice of toast and home fries.
-    `
+    `,
+      imageSrc: tofuPic,
     },
     {
       name: "Loaded Vegan Nachos",
@@ -31,7 +41,8 @@ export default function showMenu(staticDiv, currentModule) {
       description: `
       House-fried tortilla chips, seasoned tvp, Follow Your Heart cheddar shreds, refried beans, 
       onion, peppers, candied jalapenos, Kat's guacamole, lime crema, salsa on side.
-      `
+      `,
+      imageSrc: nachosPic,
     },
     {
       name: 'Mushroom Flatbread Pizza',
@@ -40,7 +51,8 @@ export default function showMenu(staticDiv, currentModule) {
         Grilled Portland Pie Company dough. Local Balsamic roasted mushrooms, pepperoncinis, and
         Follow Your Heart mozzerella shreds, topped with lemon crema.
         
-      `
+      `,
+      imageSrc: pizzaPic
     }
   ]
 
@@ -77,6 +89,11 @@ function createMenuItem(menuObject) {
   price.classList.add('menu_item_price');
   price.textContent = menuObject['price'];
   description.appendChild(price);
+
+  const image = new Image();
+  image.src = menuObject.imageSrc;
+  image.classList.add('image');
+  description.appendChild(image);
 
   menuItem.appendChild(description);
   return menuItem;

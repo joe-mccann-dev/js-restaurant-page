@@ -1,6 +1,8 @@
 import showHome from './home';
 
 export default function pageLoad(staticDiv, currentModule) {
+  const navContainer = document.createElement('div');
+  navContainer.classList.add('nav_container');
   const nav = document.createElement('nav');
   const homeLink = document.createElement('a');
   homeLink.textContent = 'Home'
@@ -17,7 +19,8 @@ export default function pageLoad(staticDiv, currentModule) {
   contactLink.setAttribute('id', 'contact');
   contactLink.href = '#'
   nav.appendChild(contactLink);
-  staticDiv.appendChild(nav);
+  navContainer.appendChild(nav);
+  staticDiv.appendChild(navContainer);
 
   const header = document.createElement('h1');
   header.textContent = "The Veggie Shack";
