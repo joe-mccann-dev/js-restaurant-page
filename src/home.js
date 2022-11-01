@@ -20,16 +20,20 @@ export default function showHome(staticDiv, currentModule) {
   const hoursContainer = document.createElement('div');
   hoursContainer.classList.add('hours_container');
   const hoursHeader = document.createElement('h2');
+  hoursHeader.classList.add('hours_header');
   hoursHeader.textContent = 'Hours';
   hoursContainer.appendChild(hoursHeader);
   const hoursList = document.createElement('ul');
   hoursList.classList.add('hours_list');
   ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri'].forEach((day) => {
-    hoursList.appendChild(createHours(day, [11, 10]));
+    if (day === 'Fri') {
+      hoursList.appendChild(createHours(day, [11, 11]))
+    } else {
+      hoursList.appendChild(createHours(day, [11, 10]));
+    }
   });
-  ['Sat', 'Sun'].forEach((day) => {
-    hoursList.appendChild(createHours(day, [9, 10]));
-  });
+  hoursList.appendChild(createHours('Sat', [11, 11]));
+  hoursList.appendChild(createHours('Sun', [9, 8]));
   hoursContainer.appendChild(hoursList);
   currentModule.appendChild(hoursContainer);
 
@@ -39,6 +43,17 @@ export default function showHome(staticDiv, currentModule) {
 
 function createHours(day, range) {
   const hours = document.createElement('li');
-  hours.textContent = `${day}: ${range[0]}AM - ${range[1]}PM`;
+  hours.classList.add('hours_list_item')
+
+  const dayElement = document.createElement('p');
+  dayElement.classList.add('hours_list_day');
+  dayElement.textContent = `${day}`;
+  hours.appendChild(dayElement);
+
+  const timeElement = document.createElement('p');
+  timeElement.classList.add('hours_list_time');
+  timeElement.textContent = `${range[0]}AM - ${range[1]}PM`;
+  hours.appendChild(timeElement);
+
   return hours;
 }
