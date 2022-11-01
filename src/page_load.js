@@ -29,5 +29,8 @@ export default function pageLoad(staticDiv, currentModule) {
 
   showHome(staticDiv, currentModule)
 
+  const footer = document.createElement('footer');
+  staticDiv.appendChild(footer);
+
   return staticDiv;
 }

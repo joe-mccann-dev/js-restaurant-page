@@ -75,10 +75,10 @@ body {
   line-height: 150%;
   letter-spacing: 1px;
   background-color: var(--yellow-300-faded);
-  border: solid 2px var(--neutral-800);
   border-radius: 24px;
-  padding: 24px;
-  margin: 36px 12px;
+  padding: 48px;
+  margin-bottom: 72px;
+  overflow: auto;
 }
 
 li {
@@ -152,9 +152,10 @@ li {
 .blur {
   background: var(--neutral-100-blur);
   backdrop-filter: blur(5px); 
+  height: 100%;
 }
 
-.nav_container {
+.nav_container, footer {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -179,6 +180,13 @@ nav a:hover {
   color: var(--neutral-100);
   border-bottom: solid 2.4px var(--neutral-100);
   transition: .2s;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 16px;
+  margin-top: 200px
 }
 
 .hours_container {
