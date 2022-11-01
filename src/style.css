@@ -40,8 +40,7 @@ img {
 /* END CSS RESET */
 
 body {
-  background-image: url("../src/images/wood-with-green-compressed.png");
-  background-position: top;
+  background-image: url("../src/images/background.png");
   background-repeat: repeat;
   background-size: cover;
   height: 100vh;
@@ -60,7 +59,12 @@ body {
 .header {
   font-weight: 700;
   font-size: 2.2rem;
-  border-bottom: solid 3px var(--neutral-900);
+  padding: 8px;
+  color: var(--green-900);
+  background-color: var(--yellow-300-faded);
+  border-top: solid 3px var(--green-900);
+  border-bottom: solid 3px var(--green-900);
+  border-radius: 12px;
 }
 
 .container {
@@ -74,7 +78,7 @@ body {
   border: solid 2px var(--neutral-800);
   border-radius: 24px;
   padding: 24px;
-  margin: 24px 12px;
+  margin: 36px 12px;
 }
 
 li {
@@ -101,6 +105,12 @@ li {
   color: var(--green-900);
 }
 
+.menu_item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 
 .menu_item_name {
   font-weight: 700;
@@ -115,6 +125,14 @@ li {
 
 .menu_item_description {
   font-size: 1.1rem;
+}
+
+.menu_item_image {
+  border-radius: 12px;
+  height: 320px;
+  object-fit: contain;
+  margin: 24px 12px;
+  align-self: flex-start;
 }
 
 .contact_header {
@@ -134,12 +152,6 @@ li {
 .blur {
   background: var(--neutral-100-blur);
   backdrop-filter: blur(5px); 
-  height: 100%;
-}
-
-.image {
-  height: 50%;
-  width: 50%;
 }
 
 .nav_container {

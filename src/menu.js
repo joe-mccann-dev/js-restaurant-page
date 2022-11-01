@@ -75,11 +75,11 @@ export default function showMenu(staticDiv, currentModule) {
 
 function createMenuItem(menuObject) {
   const menuItem = document.createElement('li');
+  menuItem.classList.add('menu_item');
 
   const title = document.createElement('h3');
   title.classList.add('menu_item_name');
   title.textContent = menuObject['name'];
-  menuItem.appendChild(title);
 
   const description = document.createElement('p');
   description.classList.add('menu_item_description');
@@ -88,14 +88,16 @@ function createMenuItem(menuObject) {
   const price = document.createElement('p');
   price.classList.add('menu_item_price');
   price.textContent = menuObject['price'];
-  description.appendChild(price);
-
+  
   const image = new Image();
   image.src = menuObject.imageSrc;
-  image.classList.add('image');
-  description.appendChild(image);
+  image.classList.add('menu_item_image');
 
+  menuItem.appendChild(title);
   menuItem.appendChild(description);
+  menuItem.appendChild(image);
+  menuItem.appendChild(price);
+
   return menuItem;
 }
  
