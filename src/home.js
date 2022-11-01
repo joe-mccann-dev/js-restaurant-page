@@ -1,11 +1,4 @@
-// import mainImage from './images/restaurant.jpg';
-
 export default function showHome(staticDiv, currentModule) {
-  // const image = new Image();
-  // image.src = mainImage;
-  // image.classList.add('image');
-  // currentModule.appendChild(image);
-
   const copy = document.createElement('p');
   copy.textContent = `
     The Veggie Shack has provided the diners of the metrowest area with
