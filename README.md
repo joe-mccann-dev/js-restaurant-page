@@ -4,7 +4,8 @@
 
 1. clone this repo.
 2. `cd js-restaurant-page`
-3. `npm start`
+3. `npm run build`
+4. `npm start`
 
 ## ES6 Modules and Webpack
 
