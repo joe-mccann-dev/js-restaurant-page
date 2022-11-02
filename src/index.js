@@ -10,19 +10,30 @@ currentModule.classList.add('container');
 pageLoad(staticDiv, currentModule);
 
 const homeLink = document.querySelector('#home');
+const menuLink = document.querySelector('#menu');
+const contactLink = document.querySelector('#contact');
+
 homeLink.addEventListener('click', ()=> {
   currentModule.replaceChildren();
   showHome(staticDiv, currentModule);
+  addAndRemoveActiveClass(homeLink, [menuLink, contactLink])
 });
 
-const menuLink = document.querySelector('#menu');
+
 menuLink.addEventListener('click', () => {
   currentModule.replaceChildren();
   showMenu(staticDiv, currentModule);
+  addAndRemoveActiveClass(menuLink, [homeLink, contactLink]);
 });
 
-const contactLink = document.querySelector('#contact');
+
 contactLink.addEventListener('click', () => {
   currentModule.replaceChildren();
   showContacts(staticDiv, currentModule)
+  addAndRemoveActiveClass(contactLink, [menuLink, homeLink]);
 });
+
+function addAndRemoveActiveClass(link, otherLinks) {
+  link.classList.add('active');
+  otherLinks.forEach((link) => { link.classList.remove('active') });
+}

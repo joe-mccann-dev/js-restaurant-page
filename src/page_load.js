@@ -1,4 +1,7 @@
 import showHome from './home';
+import gitHubIcon from './images/github.png';
+import instagramIcon from './images/instagram.png';
+import yelpIcon from './images/yelp.svg';
 
 export default function pageLoad(staticDiv, currentModule) {
   const navContainer = document.createElement('div');
@@ -30,6 +33,31 @@ export default function pageLoad(staticDiv, currentModule) {
   showHome(staticDiv, currentModule)
 
   const footer = document.createElement('footer');
+
+  const linkOne = document.createElement('a');
+  linkOne.classList.add('footer_link');
+  linkOne.href = 'https://github.com/joe-mccann-dev/js-restaurant-page';
+  const gitHub = new Image(32, 32);
+  gitHub.src = gitHubIcon;
+  linkOne.appendChild(gitHub);
+  footer.appendChild(linkOne);
+
+  const linkTwo = document.createElement('a');
+  linkTwo.classList.add('footer_link');
+  linkTwo.href = '#';
+  const instagram = new Image(32, 32);
+  instagram.src = instagramIcon;
+  linkTwo.appendChild(instagram);
+  footer.appendChild(linkTwo);
+
+  const linkThree = document.createElement('a');
+  linkThree.href = '#';
+  linkThree.classList.add('footer_link');
+  const yelp = new Image(32, 32);
+  yelp.src = yelpIcon;
+  linkThree.appendChild(yelp);
+  footer.append(linkThree);
+
   staticDiv.appendChild(footer);
 
   return staticDiv;

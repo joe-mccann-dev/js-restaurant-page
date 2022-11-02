@@ -91,6 +91,7 @@ function createMenuItem(menuObject) {
   
   const image = new Image();
   image.src = menuObject.imageSrc;
+  image.alt = 'image of ' + menuObject.name
   image.classList.add('menu_item_image');
 
   menuItem.appendChild(title);

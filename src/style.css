@@ -5,10 +5,13 @@
   --neutral-100-blur: rgb(245, 245, 245, 0.20);
   --neutral-800: #404040;
   --neutral-900: #171717;
-  --green-900: #14532d;
+  --green-300-faded: rgb(134, 239, 172, 0.2);
+  --green-900: rgb(20, 83, 45);
+  --green-900-faded: rgb(20, 83, 45, 0.8);
   --yellow-300: #fde047;
   --yellow-500: #eab308;
   --yellow-300-faded: rgb(253, 224, 71, 0.2);
+  --orange-900: #7c2d12;
 }
 
 /* BEGIN CSS RESET */
@@ -77,8 +80,14 @@ body {
   background-color: var(--yellow-300-faded);
   border-radius: 24px;
   padding: 48px;
-  margin-bottom: 72px;
+  margin-bottom: 100px;
   overflow: auto;
+}
+
+.blur {
+  background: var(--neutral-100-blur);
+  backdrop-filter: blur(5px); 
+  height: 100%;
 }
 
 li {
@@ -149,12 +158,6 @@ li {
   margin-bottom: 4px;
 }
 
-.blur {
-  background: var(--neutral-100-blur);
-  backdrop-filter: blur(5px); 
-  height: 100%;
-}
-
 .nav_container, footer {
   width: 100%;
   display: flex;
@@ -177,16 +180,22 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--neutral-100);
-  border-bottom: solid 2.4px var(--neutral-100);
+  color: var(--orange-900);
+  border-bottom: solid 2.4px var(--orange-900);
   transition: .2s;
+}
+
+.active {
+  color: var(--orange-900);
+  border-bottom: solid 2.4px var(--orange-900);
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  padding: 16px;
-  margin-top: 200px
+  padding: 12px;
+  margin-top: 200px;
+  background-color: var(--green-900-faded);
 }
 
 .hours_container {
