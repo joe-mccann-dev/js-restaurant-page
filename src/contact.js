@@ -1,23 +1,7 @@
-export default function showContacts(staticDiv, currentModule) {
-  const contacts = [
-    {
-      name: 'general inquiries',
-      detail: '555-555-5678'
-    },
-    {
-      name: 'catering',
-      detail: '555-555-1234'
-    },
-    {
-      name: 'email',
-      detail: 'info@veggieshack.com'
-    },
-    {
-      name: 'address',
-      detail: '988 Garden Boulevard, Metrowest 55555'
-    },
+import contactsList from './contactsList'
 
-  ]
+export default function showContacts(staticDiv, currentModule) {
+  const contacts = contactsList();
   const contactContainer = document.createElement('div');
   const contactHeader = document.createElement('h2');
   contactHeader.textContent = 'Contact Us'
