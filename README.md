@@ -2,6 +2,14 @@
 
 ## ES6 Modules and Webpack
 
+### Local Installation
+
+1. clone repo
+2. `cd js-restaurant-page`
+3. `npm init` (press enter until prompts end)
+4. `npm install webpack webpack-cli --save-dev`
+5. `npm start`
+
 The primary purpose of this project is to practice setting up a webpack environment and use it to manage ES6 modules.
 
 For config and setup this [webpack guide](https://webpack.js.org/guides/development/) was used.
